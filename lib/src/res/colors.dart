@@ -6,6 +6,7 @@ class CustomColors {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color transparent  = Colors.transparent;
+  static const Color unselectedTab  = Color(0xff9C9C9C);
 
 
 
