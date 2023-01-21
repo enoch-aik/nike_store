@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nike_store/screens/home/components/carousel.dart';
 import 'package:nike_store/src/constants.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,9 +42,9 @@ class HomeScreen extends StatelessWidget {
                 fit: BoxFit.scaleDown,
               )
             ],
-          )
+          ),
           //CAROUSEL
-
+HeaderCarousel()
         ],
       ),
     ));
