@@ -10,10 +10,13 @@ const String blueShoe = 'assets/images/shoe4.png';
 const String redShoe = 'assets/images/shoe5.png';
 const String fullRedShoe = 'assets/images/shoe6.png';
 const String whiteRedShoe = 'assets/images/shoe7.png';
+const String nikeBox = 'assets/images/nike_box.png';
 
 //All svg assets
 const String cartIcon = 'assets/svg/cart.svg';
 const String drawerIcon = 'assets/svg/drawer.svg';
+const String backIcon = 'assets/svg/back.svg';
+const String addToCart = 'assets/svg/add_to_cart.svg';
 
 //all shoes
 List<Shoe> allShoes = [

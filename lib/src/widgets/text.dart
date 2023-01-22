@@ -10,18 +10,20 @@ class KText extends StatelessWidget {
   final Color? color;
   final double? lineHeight;
   final TextAlign? textAlign;
+  final FontStyle? fontStyle;
   final TextDecoration? decoration;
   final TextOverflow? overflow;
 
   const KText(this.text,
       {Key? key,
-        this.fontSize,
-        this.fontWeight,
-        this.color,
-        this.lineHeight,
-        this.textAlign,
-        this.decoration,
-        this.overflow})
+      this.fontSize,
+      this.fontWeight,
+      this.color,
+      this.fontStyle,
+      this.lineHeight,
+      this.textAlign,
+      this.decoration,
+      this.overflow})
       : super(key: key);
 
   @override
@@ -33,6 +35,7 @@ class KText extends StatelessWidget {
       style: GoogleFonts.workSans().copyWith(
           decoration: decoration,
           fontSize: fontSize ?? 14.sp,
+          fontStyle: fontStyle,
           fontWeight: fontWeight ?? FontWeight.w300,
           color: color ?? CustomColors.textColor,
           height: lineHeight),

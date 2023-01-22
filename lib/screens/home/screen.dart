@@ -18,49 +18,6 @@ class HomeScreen extends StatelessWidget {
       length: 5,
       child: SafeArea(
           child: Scaffold(
-        bottomSheet: SizedBox(
-          height: 85.h,
-          width: size.width,
-          child: Container(
-            decoration:
-                BoxDecoration(
-
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(24.r),
-                        topRight: Radius.circular(24.r)),
-                    color: CustomColors.white, boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.4),
-                blurRadius: 30,
-                offset:const Offset(0, -10), // Shadow position
-              ),
-            ]),
-            child: ValueListenableBuilder(
-                valueListenable: selectedNav,
-                builder: (context, navState, _) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        ...List.generate(
-                            4,
-                            (index) => InkWell(
-                                  onTap: () {
-                                    selectedNav.value = index;
-                                  },
-                                  child: bottomNavIcon(
-                                      icon: navIcons[index],
-                                      value: navState,
-                                      index: index),
-                                )),
-                      ],
-                    ),
-                  );
-                }),
-          ),
-        ),
         body: ListView(
           padding: EdgeInsets.fromLTRB(22.w, 16.h, 22.w, 0),
           children: [
@@ -128,15 +85,58 @@ class HomeScreen extends StatelessWidget {
             //Shoe cards
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [shoeCard(allShoes[0]), shoeCard(allShoes[1])],
+              children: [shoeCard(allShoes[0],context), shoeCard(allShoes[1],context)],
             ),
             SizedBox(height: 26.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [shoeCard(allShoes[2]), shoeCard(allShoes[3])],
+              children: [shoeCard(allShoes[2],context), shoeCard(allShoes[3],context)],
             )
           ],
         ),
+            bottomSheet: SizedBox(
+              height: 85.h,
+              width: size.width,
+              child: Container(
+                decoration:
+                BoxDecoration(
+
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(24.r),
+                        topRight: Radius.circular(24.r)),
+                    color: CustomColors.white, boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.4),
+                    blurRadius: 30,
+                    offset:const Offset(0, -10), // Shadow position
+                  ),
+                ]),
+                child: ValueListenableBuilder(
+                    valueListenable: selectedNav,
+                    builder: (context, navState, _) {
+                      return Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.w),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            ...List.generate(
+                                4,
+                                    (index) => InkWell(
+                                  onTap: () {
+                                    selectedNav.value = index;
+                                  },
+                                  child: bottomNavIcon(
+                                      icon: navIcons[index],
+                                      value: navState,
+                                      index: index),
+                                )),
+                          ],
+                        ),
+                      );
+                    }),
+              ),
+            ),
       )),
     );
   }
