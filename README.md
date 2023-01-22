@@ -13,7 +13,7 @@ Nike Store UI developed Flutter.
 **Design link**
 
 ```
-https://www.figma.com/file/Qh6s7FhzaMDkV740n18joj/Nike-Shoes-Mobile-App-UI-Design?t=10v4rOvgfNbA1cIY-1
+https://www.figma.com/file/Qh6s7FhzaMDkV740n18joj/Nike-Shoes-Mobile-App-UI-Design
 ```
 
 ## How to use
