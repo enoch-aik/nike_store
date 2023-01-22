@@ -1,5 +1,6 @@
 //All image assets
 import 'package:nike_store/app/models/shoe.dart';
+import 'package:nike_store/src/widgets/nav_icons.dart';
 
 const String logo = 'assets/images/nike_logo.png';
 const String greenShoe = 'assets/images/shoe1.png';
@@ -20,4 +21,11 @@ List<Shoe> allShoes = [
   Shoe(name: 'React Presto', price: 25.99, imageUrl: redBlueShoe),
   Shoe(name: 'React Presto', price: 25.99, imageUrl: blueShoe),
   Shoe(name: 'Air Max 270', price: 25.99, imageUrl: whiteRedShoe),
+];
+
+List navIcons = [
+  BottomNavIcons.home,
+  BottomNavIcons.bookmark,
+  BottomNavIcons.notification,
+  BottomNavIcons.user,
 ];
